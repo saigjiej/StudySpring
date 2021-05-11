@@ -9,7 +9,6 @@ public class LgTV implements TVInterface{
 	public SonySpeaker speaker;
 
 	public LgTV(int price, SonySpeaker speaker) {
-		super();
 		this.price = price;
 		this.speaker = speaker;
 	}
