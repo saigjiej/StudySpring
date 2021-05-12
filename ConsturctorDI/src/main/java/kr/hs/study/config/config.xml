@@ -48,6 +48,22 @@
 	</bean>
 	
 	
+
+    <bean id="person" class = "kr.hs.study.beans.Person" lazy-init="true"/>
+	
+	<bean id="testUser" class = "kr.hs.study.beans.TestUser" lazy-init="true">
+		<constructor-arg value = "high"/>
+		<constructor-arg value = "3" type="int"/>
+		<constructor-arg ref="person"/>
+	</bean>
+
+	
+	<!-- setter DI -->
+	<bean id="t7" class="kr.hs.study.beans.TestBean3">
+		<property name="data1" value="100"/>
+		<property name="data2" value="111.11"/>
+	</bean>
+		
 	
 	
 

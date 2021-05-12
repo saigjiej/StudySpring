@@ -4,6 +4,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import kr.hs.study.beans.TestBean1;
 import kr.hs.study.beans.TestBean2;
+import kr.hs.study.beans.TestBean3;
+import kr.hs.study.beans.TestUser;
 
 public class MainClass {
 
@@ -36,6 +38,12 @@ public class MainClass {
 		
 		TestBean2 obj6 = ctx.getBean("t6", TestBean2.class);
 		obj6.prData();
+		System.out.println("================================");
+		
+		
+		TestBean3 obj7 = ctx.getBean("t7", TestBean3.class);
+		System.out.println("obj7:data1:" + obj7.getData1());
+		System.out.println("obj7:data2:" + obj7.getData2());
 		
 		ctx.close();
 	}
