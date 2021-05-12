@@ -8,6 +8,13 @@
 	                    http://www.springframework.org/schema/context
 	                    http://www.springframework.org/schema/context/spring-context.xsd
 	                    http://www.springframework.org/schema/aop
-	                    http://www.springframework.org/schema/aop/spring-aop.xsd">                
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">   
+	
+	<bean id="c1" class="kr.hs.study.beans.HyunDai" lazy-init="true">
+		<constructor-arg value="avante"/>
+		<constructor-arg value="blue"/>
+	</bean>    
+	
+	<bean id="c2" class="kr.hs.study.beans.Kia" lazy-init="true"/>             
 	                    
 </beans>
