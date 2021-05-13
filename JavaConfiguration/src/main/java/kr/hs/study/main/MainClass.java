@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import kr.hs.study.beans.TestBean1;
+import kr.hs.study.beans.TestBean2;
 import kr.hs.study.config.JavaConfig;
 
 public class MainClass {
@@ -30,12 +31,28 @@ public class MainClass {
 		// lazy, Scope
 		TestBean1 t3 = ctx2.getBean("new", TestBean1.class);
 		System.out.println("t3:" + t3);
+		System.out.println("==============================================");
 		
 		TestBean1 t4 = ctx2.getBean("new", TestBean1.class);
 		System.out.println("t4:" + t4);
+		System.out.println("==============================================");
 		
 		TestBean1 t5 = ctx2.getBean("new", TestBean1.class);
 		System.out.println("t5:" + t5);
+		System.out.println("==============================================");
+		
+		TestBean2 t6 = ctx2.getBean("t1", TestBean2.class);
+		System.out.println("t6.a:" + t6.getA());
+		System.out.println("t6.b:" + t6.getB());
+		System.out.println("t6.c:" + t6.getC());
+		System.out.println("==============================================");
+		
+		TestBean2 t7 = ctx2.getBean("t2", TestBean2.class);
+		System.out.println("t7.a:" + t7.getA());
+		System.out.println("t7.b:" + t7.getB());
+		System.out.println("t7.c:" + t7.getC());
+		
+		
 		
 		ctx2.close();
 		

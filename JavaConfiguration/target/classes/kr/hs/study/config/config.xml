@@ -13,6 +13,5 @@
 	<!-- 나는 bean을 자바파일로 등록하라고 할꺼야 -->
 	<!-- @bean이라는 애를 찾으면 무조건 bean으로 등록시켜 -->
 	<context:annotation-config/>
- 	<bean id="obj1" class = "kr.hs.study.beans.TestBean1" lazy-init = "true" scope="prototype"/>     
-	                    
+ 	<bean id="obj1" class = "kr.hs.study.beans.TestBean1" lazy-init = "true" scope="prototype"/>   
 </beans>
